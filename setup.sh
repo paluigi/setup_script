@@ -49,7 +49,8 @@ git clone https://github.com/paluigi/selenium1.git
 
 # INstall nordvpn - in the future, may witch to openvpn client
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
-
+# Add current user ot nordvpn command
+sudo usermod -aG nordvpn $USER
 
 # Install rust for cryptography package
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
