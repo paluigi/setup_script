@@ -57,3 +57,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # requirements installation
 python3 -m pip install cryptography
 python3 -m pip install boto3 minio scrapy requests selenium selenium-stealth
+
+# Check python and pwd
+which python3
+pwd
+
+# Add crontab entries for scraping and nordvpn check
+crontab -e
+
+# add following lines
+@reboot nohup /usr/bin/python3 /home/luigi/Desktop/selenium1/check_vpn.py &
+7 1 * * * nohup /home/luigi/Desktop/selenium1/scraping.sh & 
